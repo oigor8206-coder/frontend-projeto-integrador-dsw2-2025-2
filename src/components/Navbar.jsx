@@ -15,7 +15,16 @@ const Navbar = () => {
                             <Link class="nav-link" to="/sobre">Sobre</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/contato">Contato</a>
+                            <Link class="nav-link" to="/contato">contato</Link>
+                        </li>
+                        <li class="nav-item">
+                            <Link class="nav-link" to="/encomendas">Lista de Encomendas</Link>
+                        </li>
+                        <li class="nav-item">
+                            <Link class="nav-link" to="/encomendas"></Link>
+                        </li>
+                        <li class="nav-item">
+                            <Link class="nav-link" to="/encomendas">Lista de Encomendas</Link>
                         </li>
                     </ul>
                 </div>
