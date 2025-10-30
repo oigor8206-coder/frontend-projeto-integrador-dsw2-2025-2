@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from '../components/Navbar';
+import Navbar from '../../components/Navbar';
 // Importe seu Navbar.js, se ele estiver em um diretório diferente
 // import Navbar from "../components/Navbar"; 
 

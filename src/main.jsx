@@ -5,10 +5,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./pages/App.jsx";
 import Sobre from "./pages/Sobre.jsx";
 import Contato from "./pages/Contato.jsx";
-import EncomendasIndex from "./pages/EncomendasIndex.jsx";
-import EncomendasCreate from "./pages/EncomendasCreate.jsx";
-import EncomendasShow from "./pages/EncomendasShow.jsx";
-import EncomendasEdit from "./pages/EncomendasEdit.jsx";
+import EncomendasIndex from "./pages/encomendas/EncomendasIndex.jsx";
+import EncomendasCreate from "./pages/encomendas/EncomendasCreate.jsx";
+import EncomendasShow from "./pages/encomendas/EncomendasShow.jsx";
+import EncomendasEdit from "./pages/encomendas/EncomendasEdit.jsx";
 
 
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navbar from '../components/Navbar'; // Assumindo que seu Navbar está em '../components/Navbar'
+import Navbar from '../../components/Navbar'; // Assumindo que seu Navbar está em '../components/Navbar'
 import { Link } from 'react-router-dom';
 
 const EncomendarLaco = () => {
