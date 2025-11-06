@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import ThemeButton from './ThemeButton'
 
 const Navbar = () => {
     return (
@@ -27,6 +28,7 @@ const Navbar = () => {
                             <Link className="nav-link" to="/encomendas">Lista de Encomendas</Link>
                         </li>
                     </ul>
+               <ThemeButton/>
                 </div>
             </div>
         </nav>

@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     { path: "/encomendas/create", element: <EncomendasCreate /> },
     { path: "/encomendas/:id", element: <EncomendasShow /> },
     { path: "/encomendas/:id/edit", element: <EncomendasEdit /> },
-    
+
 ]);
 createRoot(document.getElementById("root")).render(
     <RouterProvider router={router} />

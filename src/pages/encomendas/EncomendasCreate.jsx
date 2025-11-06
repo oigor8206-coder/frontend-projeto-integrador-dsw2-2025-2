@@ -25,11 +25,11 @@ const EncomendarLaco = () => {
     // Função para lidar com o envio do formulário
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
         // Aqui você faria a lógica de envio (ex: API call, salvar no estado global, etc.)
         console.log('Dados da Encomenda Enviados:', dadosEncomenda);
         alert(`Encomenda de Laço para ${dadosEncomenda.nomeCliente} registrada com sucesso!`);
-        
+
         // Opcional: Resetar o formulário após o envio
         // setDadosEncomenda({
         //     nomeCliente: '',

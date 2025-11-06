@@ -45,7 +45,7 @@ const EncomendasIndexLimpo = () => {
                 if (e.id === id) {
                     const novoStatus = e.status === "Pendente" ? "Entregue" : "Pendente";
                     // Adicionando um timestamp simples de atualização
-                    return { ...e, status: novoStatus, atualizadoEm: "agora mesmo" }; 
+                    return { ...e, status: novoStatus, atualizadoEm: "agora mesmo" };
                 }
                 return e;
             })
@@ -55,8 +55,8 @@ const EncomendasIndexLimpo = () => {
     return (
         <div>
             {/* Mantendo o Navbar simples e limpo */}
-            <Navbar /> 
-            
+            <Navbar />
+
             <div className="container mt-4">
                 <div className="d-flex justify-content-between align-items-center mb-3">
                     <h2>📋 Gerenciamento de Encomendas</h2>
@@ -75,7 +75,7 @@ const EncomendasIndexLimpo = () => {
                         <div key={e.id} className="card mb-3 shadow-sm">
                             <div className="card-body">
                                 <div className="d-flex justify-content-between align-items-start">
-                                    
+
                                     {/* Detalhes Principais */}
                                     <div>
                                         <h5 className="card-title mb-1">
@@ -84,14 +84,13 @@ const EncomendasIndexLimpo = () => {
                                         <p className="mb-2">
                                             <strong>Produto:</strong> {e.produto}
                                         </p>
-                                        
+
                                         {/* Badge de Status com cores claras e escuras */}
                                         <span
-                                            className={`badge ${
-                                                e.status === "Entregue"
+                                            className={`badge ${e.status === "Entregue"
                                                     ? "bg-success"
                                                     : "bg-warning text-dark"
-                                            }`}
+                                                }`}
                                         >
                                             {e.status}
                                         </span>
@@ -104,7 +103,7 @@ const EncomendasIndexLimpo = () => {
                                         Criado: {e.criadoEm}
                                     </small>
                                 </div>
-                                
+
                                 {/* Botões de Ação */}
                                 <div className="mt-3 pt-3 border-top">
                                     <button
