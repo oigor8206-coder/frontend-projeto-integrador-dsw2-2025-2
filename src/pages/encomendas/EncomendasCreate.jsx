@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
 import Navbar from '../../components/Navbar'; // Assumindo que seu Navbar está em '../components/Navbar'
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-const EncomendarLaco = () => {
+
+const EncomendarLaco =  () => {
     // Estado para armazenar os dados do formulário
     const [dadosEncomenda, setDadosEncomenda] = useState({
         nomeCliente: '',
         material: 'Poliéster', // Valor padrão
-        chumbo: 'Sem Chumbo', // Valor padrão
+        chumbo: '1', // Valor padrão
         pesoLaco: '',
         cor: 'Branco', // Valor padrão
         observacoes: ''
     });
+
+    const navigate = useNavigate();
 
     // Função genérica para atualizar o estado ao digitar/selecionar
     const handleChange = (e) => {
@@ -23,12 +27,36 @@ const EncomendarLaco = () => {
     };
 
     // Função para lidar com o envio do formulário
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         // Aqui você faria a lógica de envio (ex: API call, salvar no estado global, etc.)
         console.log('Dados da Encomenda Enviados:', dadosEncomenda);
-        alert(`Encomenda de Laço para ${dadosEncomenda.nomeCliente} registrada com sucesso!`);
+        //alert(`Encomenda de Laço para ${dadosEncomenda.nomeCliente} registrada com sucesso!`);
+
+        const dadosEnviados = {
+            usuarios_id: 1,
+            material: dadosEncomenda.material,
+            chumbo: dadosEncomenda.chumbo,
+            peso_laco: dadosEncomenda.pesoLaco,
+            cor: dadosEncomenda.cor,
+            // observacoes: dadosEncomenda.observacoes
+        };
+       try {
+        const response = await fetch ("http://localhost:3000/api/encomendas", {
+            method: "POST",
+            body : JSON.stringify(dadosEnviados),
+            headers: {
+                "Content-Type": "application/json"
+            },
+        });
+        if (!response.ok) throw new Error ("Não foi possível salvar");
+        navigate("/encomendas");
+       } catch (error) {
+        console.log (error);
+        
+       }
+    
 
         // Opcional: Resetar o formulário após o envio
         // setDadosEncomenda({
@@ -98,10 +126,10 @@ const EncomendarLaco = () => {
                                 onChange={handleChange}
                                 required
                             >
-                                <option value="Sem Chumbo">Sem Chumbo (Padrão)</option>
-                                <option value="Chumbo Leve">Chumbo Leve</option>
-                                <option value="Chumbo Médio">Chumbo Médio</option>
-                                <option value="Chumbo Pesado">Chumbo Pesado (Recomendado para Laço Comprido)</option>
+                                <option value="1">Sem Chumbo (Padrão)</option>
+                                <option value="1">Chumbo Leve</option>
+                                <option value="3">Chumbo Médio</option>
+                                <option value="6">Chumbo Pesado (Recomendado para Laço Comprido)</option>
                             </select>
                         </div>
 
