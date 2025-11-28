@@ -1,8 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "../context/AuthContext.jsx";
+
 
 const Principal = () => {
     return (
+        <>  
+           
         // Container principal com padding superior e inferior (my-5) e centralização de texto
         <div className="container my-5 text-center">
             
@@ -55,6 +60,7 @@ const Principal = () => {
             {/* Rodapé simples adaptado para o tema Rodeio */}
             <p className="mt-5 text-muted">Tradição e qualidade que te levam ao pódio.</p>
         </div>
+        </>
     );
 }
 
