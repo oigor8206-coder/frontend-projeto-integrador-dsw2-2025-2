@@ -9,6 +9,7 @@ import EncomendasIndex from "./pages/encomendas/EncomendasIndex.jsx";
 import EncomendasCreate from "./pages/encomendas/EncomendasCreate.jsx";
 import EncomendasShow from "./pages/encomendas/EncomendasShow.jsx";
 import EncomendasEdit from "./pages/encomendas/EncomendasEdit.jsx";
+import Cadastro from "./pages/cadastro/Cadastro.jsx";
 
 
 
@@ -23,7 +24,8 @@ const router = createBrowserRouter([
     { path: "/encomendas/create", element: <EncomendasCreate /> },
     { path: "/encomendas/:id", element: <EncomendasShow /> },
     { path: "/encomendas/:id/edit", element: <EncomendasEdit /> },
-
+    {  path: "/cadastro/Cadastro", element: <Cadastro />  },
+    
 ]);
 createRoot(document.getElementById("root")).render(
     <RouterProvider router={router} />
