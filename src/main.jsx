@@ -12,6 +12,8 @@ import EncomendasEdit from "./pages/encomendas/EncomendasEdit.jsx";
 import Login from "./pages/cadastro/Login.jsx";
 import Perfil from "./pages/cadastro/Perfil.jsx";
 import Cadastro from "./pages/cadastro/Cadastro.jsx";
+import DashboardAdmin from "./pages/dashboards/DashboardAdmin.jsx";
+import DashboardUser from "./pages/dashboards/DashboardUser.jsx";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
@@ -27,6 +29,9 @@ const router = createBrowserRouter([
     { path: "/login", element: <Login /> },
     { path: "/perfil", element: <Perfil /> },
     { path: "/cadastro", element: <Cadastro /> },
+    { path: "/dashboard/admin", element: <DashboardAdmin/> },
+    { path: "/dashboard/user", element: <DashboardUser/> },
+  
 
 ]);
 createRoot(document.getElementById("root")).render(
