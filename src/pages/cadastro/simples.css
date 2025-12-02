@@ -1,0 +1,148 @@
+/* --- Fonte Arredondada e Amigável --- */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+/* --- 1. Fundo da Página (Bem Suave) --- */
+body {
+    /* Um cinza-azulado muito claro e calmante */
+    background-color: #f0f4f8; 
+    font-family: 'Nunito', sans-serif;
+    color: #485363; /* Cinza escuro suave, nunca preto puro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* --- 2. O Container (Cartão Branco Macio) --- */
+.profile-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 480px;
+    padding: 45px;
+    /* Bordas bem arredondadas */
+    border-radius: 24px; 
+    /* Sombra difusa e clara (efeito "nuvem") */
+    box-shadow: 0 15px 35px rgba(100, 116, 139, 0.08); 
+    border: 1px solid #f1f5f9;
+    box-sizing: border-box;
+}
+
+/* --- Títulos e Textos --- */
+.header-profile {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.header-profile h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #334155; /* Cinza chumbo suave */
+    margin-bottom: 8px;
+}
+
+.profile-info p {
+    text-align: center;
+    color: #94a3b8; /* Cinza claro */
+    font-size: 15px;
+    margin: 4px 0;
+}
+
+.edit-section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #64748b;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f1f5f9; /* Linha divisória quase invisível */
+}
+
+/* --- Inputs (Campos Macios) --- */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px 18px;
+    background-color: #f8fafc; /* Quase branco */
+    border: 2px solid #e2e8f0; /* Borda cinza muito clara */
+    border-radius: 12px; /* Cantos arredondados */
+    color: #475569;
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+/* Ao clicar, uma cor azul bebê suave */
+input:focus {
+    outline: none;
+    border-color: #bacbf6; 
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(186, 203, 246, 0.15);
+}
+
+/* --- Botões (Tons Pastéis) --- */
+.button-group {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 12px; /* Combina com os inputs */
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Botão Salvar (Azul Pastel Suave) */
+.save-button {
+    background-color: #8da2fb; /* Azul lavanda suave */
+    color: #ffffff;
+}
+
+.save-button:hover {
+    background-color: #7b93f7; /* Um pouco mais forte no hover */
+}
+
+/* Botão Excluir (Salmão Suave) */
+.delete-button {
+    background-color: #fff1f2; /* Fundo rosa muito claro */
+    color: #fb7185; /* Texto salmão/rosa */
+    border: 1px solid #ffe4e6;
+}
+
+.delete-button:hover {
+    background-color: #ffe4e6;
+}
+
+/* Botão Sair (Cinza Neutro) */
+.logout-button {
+    background-color: transparent;
+    color: #94a3b8;
+    border: 1px solid #e2e8f0;
+}
+
+.logout-button:hover {
+    background-color: #f1f5f9;
+    color: #64748b;
+}
