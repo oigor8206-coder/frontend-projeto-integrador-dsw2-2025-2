@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 
-const EncomendarLaco =  () => {
+const EncomendarLaco = () => {
     // Estado para armazenar os dados do formulário
     const [dadosEncomenda, setDadosEncomenda] = useState({
         nomeCliente: '',
@@ -14,8 +14,9 @@ const EncomendarLaco =  () => {
         cor: 'Branco', // Valor padrão
         observacoes: ''
     });
-
+    const [erro, setErro] = useState("");
     const navigate = useNavigate();
+
 
     // Função genérica para atualizar o estado ao digitar/selecionar
     const handleChange = (e) => {
@@ -30,33 +31,45 @@ const EncomendarLaco =  () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+       
+   
+
+    setErro("");
+
+
         // Aqui você faria a lógica de envio (ex: API call, salvar no estado global, etc.)
         console.log('Dados da Encomenda Enviados:', dadosEncomenda);
         //alert(`Encomenda de Laço para ${dadosEncomenda.nomeCliente} registrada com sucesso!`);
+
+        const token = localStorage.getItem('token');
+        if (!token) {
+            setErro("Você precisa estar logado para fazer encomenda.");
+            return;
+        }
 
         const dadosEnviados = {
             usuarios_id: 1,
             material: dadosEncomenda.material,
             chumbo: dadosEncomenda.chumbo,
             peso_laco: dadosEncomenda.pesoLaco,
-            cor: dadosEncomenda.cor,
+            cor: dadosEncomenda.cor
             // observacoes: dadosEncomenda.observacoes
         };
-       try {
-        const response = await fetch ("http://localhost:3000/api/encomendas", {
-            method: "POST",
-            body : JSON.stringify(dadosEnviados),
-            headers: {
-                "Content-Type": "application/json"
-            },
-        });
-        if (!response.ok) throw new Error ("Não foi possível salvar");
-        navigate("/encomendas");
-       } catch (error) {
-        console.log (error);
-        
-       }
-    
+        try {
+            const response = await fetch("http://localhost:3000/api/encomendas", {
+                method: "POST",
+                body: JSON.stringify(dadosEnviados),
+                headers: {
+                    "Content-Type": "application/json"
+                },
+            });
+            if (!response.ok) throw new Error("Não foi possível salvar");
+            navigate("/encomendas");
+        } catch (error) {
+            console.log(error);
+            setErro(error.message);
+        }
+
 
         // Opcional: Resetar o formulário após o envio
         // setDadosEncomenda({
@@ -83,7 +96,7 @@ const EncomendarLaco =  () => {
 
                 <div className="card shadow-lg p-4">
                     <form onSubmit={handleSubmit}>
-
+                    {erro && <div className="alert alert-danger">{erro}</div>}
                         {/* Nome do Cliente */}
                         <div className="mb-3">
                             <label htmlFor="nomeCliente" className="form-label">Seu Nome / Nome para a Encomenda</label>
