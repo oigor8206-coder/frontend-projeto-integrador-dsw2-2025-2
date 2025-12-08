@@ -6,7 +6,7 @@ const Principal = () => {
     return (
         <>  
            
-        // Container principal com padding superior e inferior (my-5) e centralização de texto
+       
         <div className="container my-5 text-center">
             
             {/* Título Principal adaptado para o tema Rodeio */}
@@ -27,7 +27,7 @@ const Principal = () => {
                         Mude o 'src' para uma imagem de laços de corda ou couro.
                     */}
                     <img 
-                        src="/images/lacos-rodeio-destaque.jpg" // CAMINHO DA IMAGEM DE LAÇOS DE RODEIO
+                        src="laco.jpg" // CAMINHO DA IMAGEM DE LAÇOS DE RODEIO
                         className="img-fluid rounded shadow-lg border border-3 border-info" 
                         alt="Laço de corda profissional e acessórios de montaria"
                         // Estilo simples para limitar o tamanho da imagem, se necessário
