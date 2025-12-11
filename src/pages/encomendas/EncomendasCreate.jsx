@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import Navbar from '../../components/Navbar'; // Assumindo que seu Navbar está em '../components/Navbar'
+import Navbar from '../../components/Navbar'; 
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-
 
 const EncomendarLaco = () => {
     // Estado para armazenar os dados do formulário
@@ -17,7 +16,6 @@ const EncomendarLaco = () => {
     const [erro, setErro] = useState("");
     const navigate = useNavigate();
 
-
     // Função genérica para atualizar o estado ao digitar/selecionar
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -30,16 +28,10 @@ const EncomendarLaco = () => {
     // Função para lidar com o envio do formulário
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-       
-   
-
-    setErro("");
-
+        setErro("");
 
         // Aqui você faria a lógica de envio (ex: API call, salvar no estado global, etc.)
         console.log('Dados da Encomenda Enviados:', dadosEncomenda);
-        //alert(`Encomenda de Laço para ${dadosEncomenda.nomeCliente} registrada com sucesso!`);
 
         const token = localStorage.getItem('token');
         if (!token) {
@@ -69,23 +61,15 @@ const EncomendarLaco = () => {
             console.log(error);
             setErro(error.message);
         }
-
-
-        // Opcional: Resetar o formulário após o envio
-        // setDadosEncomenda({
-        //     nomeCliente: '',
-        //     material: 'Poliéster',
-        //     chumbo: 'Sem Chumbo',
-        //     pesoLaco: '',
-        //     cor: 'Branco',
-        //     observacoes: ''
-        // });
     };
 
     return (
-        <div>
+        // AJUSTE 1: Wrapper principal com altura 100vh e cor de fundo
+        <div style={{ minHeight: '100vh', backgroundColor: '#f0f2f5', display: 'flex', flexDirection: 'column' }}>
             <Navbar />
-            <div className="container my-5">
+            
+            {/* AJUSTE 2: flex-grow-1 garante que o conteúdo ocupe o espaço restante */}
+            <div className="container my-5 flex-grow-1">
                 {/* Cabeçalho da página */}
                 <div className="d-flex justify-content-between align-items-center mb-4">
                     <h2>✏️ Personalize e Encomende Seu Laço</h2>

@@ -1,73 +1,115 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
-
-// Estilos simples em JavaScript para demonstrar
-const styles = {
-  container: {
-    fontFamily: 'Arial, sans-serif',
-    margin: '0 auto',
-    padding: '20px',
-    maxWidth: '900px',
-  },
-  title: {
-    textAlign: 'center',
-    color: '#333',
-  },
-  section: {
-    marginBottom: '30px',
-  },
-  subtitle: {
-    color: '#555',
-    marginBottom: '10px',
-  },
-  text: {
-    color: '#666',
-    lineHeight: '1.6',
-  },
-  footer: {
-    textAlign: 'center',
-    marginTop: '50px',
-    padding: '20px',
-    backgroundColor: '#333',
-    color: '#fff',
-  },
-};
+import React from "react";
+import Navbar from "../components/Navbar";
 
 const Sobre = () => {
   return (
-    <div>
+    <div
+      style={{
+        minHeight: "100vh",
+        width: "100%",
+        background: "linear-gradient(180deg, #f2d7b5, #e6c295)",
+        paddingBottom: "50px",
+      }}
+    >
       <Navbar />
-      <div style={styles.container}>
-        <h1 style={styles.title}>Sobre a [Nome da Empresa]</h1>
 
-        <section style={styles.section}>
-          <h2 style={styles.subtitle}>Nossa História</h2>
-          <p style={styles.text}>
-            A [Nome da Empresa] nasceu da paixão e da tradição de nossa família, com o objetivo de compartilhar com o mundo
-            a beleza e a riqueza cultural dos laços crioulos. Nossa história é marcada pela união, pelas raízes fortes da
-            nossa ancestralidade e pela dedicação em preservar e valorizar a cultura negra no Brasil.
+      <div
+        style={{
+          maxWidth: "1000px",
+          margin: "0 auto",
+          padding: "40px 20px",
+        }}
+      >
+        {/* Título */}
+        <h1
+          style={{
+            textAlign: "center",
+            fontSize: "2.8rem",
+            color: "#8B4513",
+            fontWeight: "800",
+            textShadow: "1px 1px 3px rgba(0,0,0,0.2)",
+            marginBottom: "40px",
+          }}
+        >
+          Sobre a Laço Eterno
+        </h1>
+
+        {/* CARD 1 */}
+        <div
+          style={{
+            background: "#fff5e1",
+            border: "3px solid #8B4513",
+            borderRadius: "18px",
+            padding: "25px",
+            marginBottom: "35px",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+          }}
+        >
+          <h2 style={{ color: "#8B4513", fontWeight: "700" }}>Nossa História</h2>
+          <p style={{ fontSize: "1.1rem", color: "#4b3a2f" }}>
+            A <strong>Laço Eterno</strong> nasceu da tradição, cultura e ancestralidade que atravessam gerações. 
+            Cada laço criado carrega um pedaço da nossa história, feito à mão com cuidado e respeito pela cultura 
+            afro-brasileira. Um legado que nos inspira diariamente.
           </p>
-        </section>
+        </div>
 
-        <section style={styles.section}>
-          <h2 style={styles.subtitle}>Missão, Visão e Valores</h2>
-          <ul style={styles.text}>
-            <li><strong>Missão:</strong> Valorizar a cultura afro-brasileira por meio da produção de laços crioulos artesanais.</li>
-            <li><strong>Visão:</strong> Ser reconhecida como uma marca de referência na produção de laços crioulos.</li>
-            <li><strong>Valores:</strong> Autenticidade, Respeito, Empoderamento, Qualidade.</li>
+        {/* CARD 2 */}
+        <div
+          style={{
+            background: "#fff5e1",
+            border: "3px solid #8B4513",
+            borderRadius: "18px",
+            padding: "25px",
+            marginBottom: "35px",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+          }}
+        >
+          <h2 style={{ color: "#8B4513", fontWeight: "700" }}>
+            Missão, Visão e Valores
+          </h2>
+
+          <ul style={{ fontSize: "1.1rem", color: "#4b3a2f" }}>
+            <li>
+              <strong>Missão:</strong> Honrar e representar a cultura afro-brasileira através de laços crioulos artesanais.
+            </li>
+            <li>
+              <strong>Visão:</strong> Ser referência nacional em acessórios culturais.
+            </li>
+            <li>
+              <strong>Valores:</strong> Autenticidade, Respeito, Empoderamento, Tradição e Qualidade.
+            </li>
           </ul>
-        </section>
+        </div>
 
-        <section style={styles.section}>
-          <h2 style={styles.subtitle}>Nosso Compromisso com a Cultura</h2>
-          <p style={styles.text}>
-            Os laços crioulos não são apenas acessórios, são símbolos de resistência, de identidade e de orgulho. Acreditamos
-            que é fundamental promover e preservar a cultura afro-brasileira em todos os aspectos de nossas vidas.
+        {/* CARD 3 */}
+        <div
+          style={{
+            background: "#fff5e1",
+            border: "3px solid #8B4513",
+            borderRadius: "18px",
+            padding: "25px",
+            marginBottom: "35px",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+          }}
+        >
+          <h2 style={{ color: "#8B4513", fontWeight: "700" }}>
+            Nosso Compromisso
+          </h2>
+          <p style={{ fontSize: "1.1rem", color: "#4b3a2f" }}>
+            Os laços crioulos representam força, ancestralidade e identidade. Nosso compromisso é manter viva essa cultura tão rica, 
+            transformando cada peça em um símbolo de orgulho, resistência e história.
           </p>
-        </section>
+        </div>
 
-        <footer style={styles.footer}>
-          <p>&copy; 2025 [Nome da Empresa]. Todos os direitos reservados.</p>
+        <footer
+          style={{
+            textAlign: "center",
+            marginTop: "50px",
+            color: "#5a3b29",
+            fontWeight: "600",
+          }}
+        >
+          © 2025 Laço Eterno — Tradição que atravessa gerações.
         </footer>
       </div>
     </div>
